@@ -18,3 +18,9 @@
 
 > *"Самой холодной зимой я узнал, что внутри меня — непобедимое лето"*  
 > **— Альбер Камю**
+
+<br><br><br><br><br><br><br><br><br><br>
+
+мемчик
+
+<img width="613" height="564" alt="image" src="https://github.com/user-attachments/assets/2e2019d5-66a6-4b64-8661-0a2538db30f4" />
