@@ -1,0 +1,91 @@
+/* Внешний подключаемый CSS. Без фреймворков. */
+:root{
+  --bg: #0f172a;      /* slate-900 */
+  --panel:#111827;    /* gray-900 */
+  --ink:#e5e7eb;      /* gray-200 */
+  --muted:#94a3b8;    /* slate-400 */
+  --brand:#f59e0b;    /* amber-500 */
+  --accent:#22c55e;   /* green-500 */
+  --line:#1f2937;     /* gray-800 */
+}
+
+*{ box-sizing:border-box; }
+html,body{ height:100%; }
+body{
+  margin:0;
+  background:linear-gradient(180deg, var(--bg), #0b1220 70%);
+  color:var(--ink);
+  font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
+}
+
+.container{ width:min(1100px, 92%); margin-inline:auto; }
+
+.site-header{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:18px 0; border-bottom:1px solid var(--line);
+}
+
+.logo{
+  font-weight:800; letter-spacing:.3px; color:var(--ink); text-decoration:none;
+}
+.logo:hover{ color:var(--brand); }
+
+.main-nav a{
+  color:var(--ink); text-decoration:none; margin-left:18px; padding:6px 10px; border-radius:999px;
+  border:1px solid transparent;
+}
+.main-nav a:hover{ border-color:var(--line); background:#0b1220; }
+.main-nav a.active{ background:linear-gradient(90deg,var(--brand),var(--accent)); color:#0b1220; font-weight:700; }
+
+/* Атрибутный селектор: внешние ссылки */
+a[target="_blank"]{ position:relative; }
+a[target="_blank"]::after{ content:"↗"; margin-left:4px; font-size:.9em; color:var(--muted); }
+
+/* Герой */
+.hero{
+  display:grid; grid-template-columns: 1.1fr .9fr; gap:24px; align-items:center;
+  padding:36px 0;
+}
+
+.hero-img{ width:100%; max-width:420px; display:block; margin:0 auto; }
+.hero-text h1{ font-size:clamp(28px, 3.6vw, 44px); line-height:1.2; margin:0 0 12px; }
+.pill-link{ text-decoration:none; }
+.pill{ display:inline-block; padding:10px 16px; border-radius:999px; background:var(--brand); color:#0b1220; font-weight:700; }
+.pill:hover{ background:var(--accent); }
+
+/* Карточки */
+.cards{ display:grid; grid-template-columns: repeat(3, 1fr); gap:18px; padding:12px 0 40px; }
+.card{ background:rgba(255,255,255,.02); border:1px solid var(--line); border-radius:16px; padding:16px; }
+.card img{ width:100%; height:180px; object-fit:contain; background:#0b1220; border-radius:12px; border:1px solid var(--line); }
+.card h2{ margin:12px 0 6px; font-size:20px; }
+.card p{ margin:0 0 8px; }
+
+/* Узкий контейнер для текста */
+.narrow{ max-width:800px; }
+
+.facts dt{ font-weight:700; margin-top:10px; }
+.facts dd{ margin:0 0 8px 0; color:var(--muted); }
+
+.quote{ margin:18px 0; padding:14px 18px; background:rgba(255,255,255,.03); border-left:4px solid var(--brand); }
+
+/* Таблица с разным выравниванием */
+.plan{ width:100%; border-collapse:collapse; background:rgba(255,255,255,.02); border:1px solid var(--line); border-radius:12px; overflow:hidden; }
+.plan thead{ background:rgba(255,255,255,.04); }
+.plan th, .plan td{ padding:12px 14px; border-bottom:1px solid var(--line); }
+.plan th{ text-align:left; letter-spacing:.2px; }
+.plan tbody tr:nth-child(even){ background:rgba(255,255,255,.02); }
+/* Выравнивание для двух колонок: время по центру, активность по левому краю */
+.plan th:nth-child(1),
+.plan td:nth-child(1){ text-align:center; }
+.plan th:nth-child(2),
+.plan td:nth-child(2){ text-align:left; }
+
+.muted{ color:var(--muted); }
+
+.site-footer{ padding:20px 0 40px; color:var(--muted); border-top:1px solid var(--line); margin-top:28px; }
+
+/* Адаптивность */
+@media (max-width: 880px){
+  .hero{ grid-template-columns: 1fr; }
+  .cards{ grid-template-columns: 1fr; }
+}
