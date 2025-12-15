@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 200 150">
+  <rect width="200" height="150" fill="#0b1220"/>
+  <g transform="translate(0,0)">
+    <path d="M10 80 Q 100 20 190 80" fill="none" stroke="#94a3b8" stroke-width="6"/>
+    <ellipse cx="110" cy="75" rx="30" ry="18" fill="#94a3b8"/>
+    <circle cx="100" cy="70" r="3" fill="#0b1220"/>
+    <circle cx="120" cy="70" r="3" fill="#0b1220"/>
+    <path d="M102 80 q 8 6 16 0" stroke="#0b1220" fill="none" stroke-width="2"/>
+    <text x="100" y="120" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="bold" font-size="18" fill="#22c55e">ПОСЛЕ ОБЕДА</text>
+  </g>
+</svg>
