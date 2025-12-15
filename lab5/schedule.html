@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Министерство Прокрастинации — Расписание</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+<header class="container site-header">
+  <a class="logo" href="index.html">Министерство Прокрастинации</a>
+  <nav class="main-nav" aria-label="Главное меню">
+    <a href="index.html">Главная</a>
+    <a href="manifesto.html">Манифест</a>
+    <a href="schedule.html" class="active">Расписание</a>
+    <a href="signup.html">Анкета</a>
+  </nav>
+</header>
+
+<main class="container">
+  <h1>Расписание на день</h1>
+  <p>Это универсальное расписание, придерживаться которого мы рекомендуем всем людям, которые разделяют наши ценности.
+    Расписание можно редактировать под свою специфику. Главное требование - придерживаться заданного соотношения работы и прочих очень важных дел.
+  </p>
+
+  <!-- Контейнер для индикатора загрузки -->
+  <div id="schedule-loading" style="text-align: center; padding: 20px; color: #94a3b8; font-style: italic;">
+    Загрузка расписания...
+  </div>
+
+  <!-- Контейнер для сообщения об ошибке -->
+  <div id="schedule-error" style="display: none;"></div>
+
+  <table class="plan" style="display: none;">
+    <thead>
+    <tr>
+      <th>Время</th>
+      <th>Активность</th>
+    </tr>
+    </thead>
+    <tbody id="schedule-body">
+    <!-- Данные будут загружаться динамически -->
+    </tbody>
+  </table>
+
+  <p><a href="index.html">Вернуться на главную</a></p>
+</main>
+
+<footer class="container site-footer">
+  <p>© 2025, защиту всех прав мы отложили. Связаться с нами <a href="mailto:procrastinate@min.gov" title="Написать нам">по почте</a> (не факт, что мы ответим).</p>
+</footer>
+</body>
+</html>
